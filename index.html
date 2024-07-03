@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | Brand </title>
+    <meta name="Auther" description="Babloo Kumar">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+     <header class="heading d-flex fixed top-0 left-0 grow-shrink-basis align-center myclass">
+          <div class="heading-title-icon d-flex align-center">
+              <h1 class="heading-title">
+                  <a class="link" href="/">Brand Store</a>
+              </h1>
+          </div>
+          <div class="search-box-container relative">
+               <input class="search-box-input" placeholder="Search Product">
+               <span class="material-symbols-outlined absolute left-0 top-0">
+                    search
+                    </span>
+          </div>
+          <nav class="navigation">
+              <ul class="gap list-non-bullet d-flex align-center">
+                  <li class="list-item-inline">
+                      <a href="/" class="link cursor"><span class="nav-icon material-symbols-outlined">
+                         favorite
+                         </span></a>
+                  </li>
+                  <li class="list-item-inline">
+                      <a href="./cart.html" class="link cursor "><span class="nav-icon material-symbols-outlined">
+                         shopping_cart
+                         </span></a>
+                  </li>
+              </ul>
+          </nav>
+      </header>
+
+      <div class="products-page d-flex">
+        <div>
+            <aside class="side-bar">
+                <h3 class="heading-3">Filter</h3>
+                <div class="filter-container">
+                    <!-- <h3 class="heading-3">Categories</h3> -->
+                    <!-- <div class="d-flex align-center gap">
+                        <input data-idealFor="1" id="idealFor-1" class="radio" type="radio" name="idealFor">
+                        <label data-idealFor="1" for="idealFor-1" class="label">Price - Low to high</label>
+                    </div>
+                    <div class="d-flex align-center gap">
+                        <input data-idealFor="2" id="idealFor-2" class="radio" type="radio" name="idealFor">
+                        <label data-idealFor="2" for="idealFor-2" class="label">Price - High to low</label>
+                    </div> -->
+                    <h3 class="heading-3">Sort by</h3>
+                    <div class="d-flex align-center gap">
+                        <input data-newPrice="1" id="newPrice-1" class="radio" type="radio" name="newPrice">
+                        <label data-newPrice="1" for="newPrice-1" class="label">Price - Low to high</label>
+                    </div>
+                    <div class="d-flex align-center gap">
+                        <input data-newPrice="2" id="newPrice-2" class="radio" type="radio" name="newPrice">
+                        <label data-newPrice="2" for="newPrice-2" class="label">Price - High to low</label>
+                    </div>
+                    <h3 class="heading-3">Ratings</h3>
+                    <div class="d-flex align-center gap">
+                        <input data-rating="4" id="rating-4" class="radio" type="radio" name="rating">
+                        <label data-rating="4" for="rating-4" class="label">4 stars & above</label>
+                    </div>
+                    <div class="d-flex align-center gap">
+                        <input data-rating="3" id="rating-3" class="radio" type="radio" name="rating">
+                        <label data-rating="3" for="rating-3" class="label">3 stars & above</label>
+                    </div>
+                    <div class="d-flex align-center gap">
+                        <input data-rating="2" id="rating-2" class="radio" type="radio" name="rating">
+                        <label data-rating="2" for="rating-2" class="label">2 stars & above</label>
+                    </div>
+                    <div class="d-flex align-center gap">
+                        <input data-rating="1" id="rating-1" class="radio" type="radio" name="rating">
+                        <label data-rating="1" for="rating-1" class="label">1 stars & above</label>
+                    </div>
+                    <h3 class="heading-3">Discount</h3>
+                    <div class="d-flex align-center gap">
+                        <input data-discount="90" id="discount-90" class="radio" type="radio" name="discount">
+                        <label data-discount="90" for="discount-90" class="label">90% & above</label>
+                    </div>
+                    <div class="d-flex align-center gap">
+                        <input data-discount="80" id="discount-80" class="radio" type="radio" name="discount">
+                        <label data-discount="80" for="discount-80" class="label">80% & above</label>
+                    </div>
+                    <div class="d-flex align-center gap">
+                        <input data-discount="70" id="discount-70" class="radio" type="radio" name="discount">
+                        <label data-discount="70" for="discount-70" class="label">70% & above</label>
+                    </div>
+                    <div class="d-flex align-center gap">
+                        <input data-discount="60" id="discount-60" class="radio" type="radio" name="discount">
+                        <label data-discount="60" for="discount-60" class="label">60% & above</label>
+                    </div>
+                    <div class="d-flex align-center gap">
+                        <input data-discount="50" id="discount-50" class="radio" type="radio" name="discount">
+                        <label data-discount="50" for="discount-50" class="label">50% & above</label>
+                    </div>
+                    <div class="d-flex align-center gap">
+                        <input data-discount="40" id="discount-40" class="radio" type="radio" name="discount">
+                        <label data-discount="40" for="discount-40" class="label">40% & above</label>
+                    </div>
+                    <div class="d-flex align-center gap">
+                        <input data-discount="30" id="discount-30" class="radio" type="radio" name="discount">
+                        <label data-discount="30" for="discount-30" class="label">30% & above</label>
+                    </div>
+                    <div class="d-flex align-center gap">
+                        <input data-discount="20" id="discount-20" class="radio" type="radio" name="discount">
+                        <label data-discount="20" for="discount-20" class="label">20% & above</label>
+                    </div>
+                    <div class="d-flex align-center gap">
+                        <input data-discount="10" id="discount-10" class="radio" type="radio" name="discount">
+                        <label data-discount="10" for="discount-10" class="label">10% & above</label>
+                    </div>
+                    
+                </div>
+            </aside>
+        </div>
+        <div class="product-container d-flex wrap gap" id="products"></div>
+    </div> 
+    <!-- i have omit below 2 line -->
+    <!-- <div class="products-page d-flex wrap gap " id="products">
+    </div> -->
+    <!-- <div class="card card-vertical d-flex direction-column relative shadow">
+        <div class="card-image-container">
+             <img class="card-image" src="https://rukminim2.flixcart.com/image/612/612/xif0q/top/w/b/q/-original-imaguza66yrs4h7a.jpeg?q=70" alt="shoes">
+        </div>
+        <div class="card-details">
+             <div class="card-title">Premium Collection</div>
+             <div class="card-description">
+                  <p class="card-des">Men Sneakers</p>
+                  <p class="card-price">
+                     Rs. 1750
+                        <span class="price-strike-through">Rs. 2499</span>
+                     <span class="discount">(30% OFF)</span>
+                  </p>
+                  <p class="d-flex align-centre">
+                    <span>4.8</span>
+                    <span class="material-icons-outlined star">star</span>
+                  </p>
+             </div>
+             <div class="cta-btn">
+                  <button class="button btn-primary btn-icon cart-btn d-flex align-center justify-center gap cursor btn-margin">
+                    <span class="material-icons-outlined star">shopping_cart</span> 
+                    <span>Add To Cart</span>
+                  </button>
+             </div>
+        </div> -->
+   <!-- </div> -->
+   <script type="module" src="./index.js"></script>
+</body>
+</html>
