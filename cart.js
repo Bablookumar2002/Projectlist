@@ -1,5 +1,5 @@
 // import { createProductCart } from "./createProductCart.js";
-import { findProductInCart } from "./findProductInCart/utils.js";
+import { findProductInCart } from "./utils.js";
 import { createHorizontalProductCard } from "./createHorizontalProductCard.js";
 let cardContainer=document.getElementById("cart");
 
