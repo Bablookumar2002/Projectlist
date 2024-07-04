@@ -25,12 +25,15 @@
   padding-left: 2rem;
   font-size: 1rem;
   border: none;
-  border-bottom: 1px solid var(--primary-color);
+  /* border-bottom: 1px solid var(--primary-color); */
+  border-bottom: 1.5px solid white;
   background-color: transparent;
 }
 
 .search-box-input:focus {
   outline: none;
+  /* //mychange1 */
+  color: white;
 }
 
 .nav-icon {
@@ -137,3 +140,17 @@
 .myclass2{
   margin-left: 8px;
 }
+.myclass{
+  background-color: blue;
+  color: white;
+}
+
+/* my change2 */
+.my::placeholder {
+  color: white; /* Change this to the desired color */
+  opacity: 1; /* Optional: Ensure the color is fully opaque */
+}
+/* my change3 */
+/* .myfav{
+  color: red;
+} */
