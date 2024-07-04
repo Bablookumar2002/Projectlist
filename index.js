@@ -1,6 +1,6 @@
-import { products } from "./db/products.js";
+import { products } from "./products.js";
 import { createProductCart } from "./createProductCart.js";
-import {findProductInCart}  from"./findProductInCart/utils.js";
+import {findProductInCart}  from"./utils.js";
 let productContainer=document.getElementById("products");
 let cart=JSON.parse(localStorage.getItem("cart")) || [];
 let filterContainer=document.querySelector(".side-bar");
