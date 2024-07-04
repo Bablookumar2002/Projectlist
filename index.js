@@ -1,6 +1,6 @@
-import { products } from "./products.js";
+import { products } from "./db/products.js";
 import { createProductCart } from "./createProductCart.js";
-import {findProductInCart}  from"./utils.js";
+import {findProductInCart}  from"./findProductInCart/utils.js";
 let productContainer=document.getElementById("products");
 let cart=JSON.parse(localStorage.getItem("cart")) || [];
 let filterContainer=document.querySelector(".side-bar");
@@ -132,7 +132,8 @@ let filterContainer=document.querySelector(".side-bar");
     let currentFilters = {
         rating: null,
         discount: null,
-        newPrice:null
+        newPrice:null,
+        idealFor:null
     };
     
     
@@ -149,9 +150,9 @@ let filterContainer=document.querySelector(".side-bar");
             currentFilters.newPrice = Number(event.target.dataset.newprice); // Use 'newprice' instead of 'newPrice'
         }
 
-        // if (event.target.dataset.idealfor) {
-        //     currentFilters.newPrice = (event.target.dataset.idealfor); // Use 'newprice' instead of 'newPrice'
-        // }
+        if (event.target.dataset.idealfor) {
+            currentFilters.idealFor = Number(event.target.dataset.idealfor); // Use 'newprice' instead of 'newPrice'
+        }
     
         console.log(currentFilters); // Debugging: Log currentFilters object
     
@@ -176,13 +177,22 @@ let filterContainer=document.querySelector(".side-bar");
             updatedProducts = updatedProducts.sort((a, b) => b.newPrice - a.newPrice);
         }
 
-        // if (currentFilters.idealFor !== null && currentFilters.idealFor === 1) {
-        //     updatedProducts = updatedProducts.sort((a, b) => a.newPrice - b.newPrice);
-        // }
-        // if (currentFilters.idealFor !== null && currentFilters.idealFor === 2) {
-        //     updatedProducts = updatedProducts.sort((a, b) => b.newPrice - a.newPrice);
-        // }
-    
+        if (currentFilters.idealFor !== null) {
+            if (currentFilters.idealFor === 1) {
+                updatedProducts = updatedProducts.filter(
+                    ({ idealFor }) => idealFor === "men"
+                );
+            } else if (currentFilters.idealFor === 2) {
+                updatedProducts = updatedProducts.filter(
+                    ({ idealFor }) => idealFor === "women"
+                );
+            } else if (currentFilters.idealFor === 3) {  // Assuming 3 represents "unisex"
+                updatedProducts = updatedProducts.filter(
+                    ({ idealFor }) => idealFor === "unisex"
+                );
+            }
+        }
+        //console.log(updatedProducts);
         productContainer.innerHTML = "";
         createProductCart(updatedProducts, productContainer, findProductInCart, "products");
     });
